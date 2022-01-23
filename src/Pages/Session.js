@@ -13,6 +13,7 @@ const Session = () => {
                         </div>
                         <div>
                             <button className='d-flex btn'><p className='mx-3'> <i class="fas fa-plus"></i> Add Session</p></button>
+                            <p>test</p>
                         </div>
                     </div>
                 </div>

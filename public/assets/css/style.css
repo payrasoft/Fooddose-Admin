@@ -1,0 +1,91 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap");
+body,
+button {
+  font-family: "Inter", sans-serif;
+}
+:root {
+  --offcanvas-width: 270px;
+  --topNavbarHeight: 56px;
+}
+.sidebar-nav {
+  width: var(--offcanvas-width);
+}
+.sidebar-link {
+  display: flex;
+  align-items: center;
+}
+.sidebar-link .right-icon {
+  display: inline-flex;
+}
+.sidebar-link[aria-expanded="true"] .right-icon {
+  transform: rotate(180deg);
+}
+@media (min-width: 992px) {
+  body {
+    overflow: auto !important;
+  }
+  main {
+    margin-left: var(--offcanvas-width);
+  }
+  /* this is to remove the backdrop */
+  .offcanvas-backdrop::before {
+    display: none;
+  }
+  .offcanv ::-webkit-scrollbar {
+    display: none !important;
+  }
+  .offcanv {
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
+  }
+
+  .navbar-light .navbar-nav .nav-link,
+  .navbar-light .navbar-nav .nav-link.active {
+    color: #000 !important;
+    transition: 0.5s;
+  }
+  .navbar-light .navbar-nav .nav-link:hover,
+  .navbar-light .navbar-nav .nav-link.active:hover {
+    color: #f46f22 !important;
+  }
+
+  .add-merchant label {
+    margin-bottom: 7px;
+  }
+  .sidebar-nav {
+    -webkit-transform: none;
+    transform: none;
+    visibility: visible !important;
+    height: calc(100% - var(--topNavbarHeight));
+    top: var(--topNavbarHeight);
+  }
+}
+.navStyle {
+  background-color: white;
+  box-shadow: rgba(0, 0, 0, 0.07) 0px 1px 2px, rgba(0, 0, 0, 0.07) 0px 2px 4px,
+    rgba(0, 0, 0, 0.07) 0px 4px 8px, rgba(0, 0, 0, 0.07) 0px 8px 16px,
+    rgba(0, 0, 0, 0.07) 0px 16px 32px, rgba(0, 0, 0, 0.07) 0px 32px 64px;
+}
+
+.table > :not(:first-child) {
+  border-top: 1px solid currentColor;
+}
+
+.top-content button,
+.table-top button {
+  background-color: #660000 !important;
+  border: #660000;
+}
+.top-content a {
+  text-decoration: none;
+  color: #fff;
+}
+
+@media (max-width: 655px) {
+  .days {
+    display: block!important;
+  }
+  .table-top{
+    display: block!important;
+  }
+}

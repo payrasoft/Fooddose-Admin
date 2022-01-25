@@ -137,14 +137,6 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/add-merchants" className="nav-link px-3">
-                        <span className="me-2">
-                          <i className="fas fa-list-ul"></i>
-                        </span>
-                        <span>Add Merchants</span>
-                      </Link>
-                    </li>
-                    <li>
                       <Link to="/pending-merchants" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
@@ -164,53 +156,7 @@ const Header = () => {
                 </div>
               </li>
 
-              {/* Restaurant */}
-
-              <li>
-                <a
-                  className="nav-link px-3 sidebar-link"
-                  data-bs-toggle="collapse"
-                  href="#restaurant"
-                >
-                  <span className="me-2">
-                    <i className="fas fa-utensils"></i>
-                  </span>
-                  <span>Restaurant</span>
-                  <span className="ms-auto">
-                    <span className="right-icon">
-                      <i className="bi bi-chevron-down"></i>
-                    </span>
-                  </span>
-                </a>
-                <div className="collapse" id="restaurant">
-                  <ul className="navbar-nav ps-3">
-                    <li>
-                      <Link to="/all-merchants" className="nav-link px-3">
-                        <span className="me-2">
-                          <i className="fas fa-list-ul"></i>
-                        </span>
-                        <span>Restaurant List</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/add-merchants" className="nav-link px-3">
-                        <span className="me-2">
-                          <i className="fas fa-list-ul"></i>
-                        </span>
-                        <span>Pending Restaurant</span>
-                      </Link>
-                    </li>
-                    <li>
-                      <Link to="/pending-merchants" className="nav-link px-3">
-                        <span className="me-2">
-                          <i className="fas fa-list-ul"></i>
-                        </span>
-                        <span>Rejected Restaurant</span>
-                      </Link>
-                    </li>
-                  </ul>
-                </div>
-              </li>
+           
 
               {/* Order */}
 
@@ -233,7 +179,7 @@ const Header = () => {
                 <div className="collapse" id="order">
                   <ul className="navbar-nav ps-3">
                     <li>
-                      <Link to="/all-order" className="nav-link px-3">
+                      <Link to="/all-merchants" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -297,7 +243,7 @@ const Header = () => {
                 <div className="collapse" id="rider">
                   <ul className="navbar-nav ps-3">
                     <li>
-                      <Link to="/all-merchants" className="nav-link px-3">
+                      <Link to="/all-rider" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -305,7 +251,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/add-merchants" className="nav-link px-3">
+                      <Link to="/pending-rider" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -313,7 +259,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/pending-merchants" className="nav-link px-3">
+                      <Link to="/rejected-rider" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -428,6 +374,9 @@ const Header = () => {
                 </div>
               </li>
 
+                {/* notice board  */}
+
+
               <li>
                 <a
                   className="nav-link px-3 sidebar-link"
@@ -447,7 +396,7 @@ const Header = () => {
                 <div className="collapse" id="notice">
                   <ul className="navbar-nav ps-3">
                     <li>
-                      <Link to="/all-merchants" className="nav-link px-3">
+                      <Link to="/add-notice" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -455,7 +404,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/add-merchants" className="nav-link px-3">
+                      <Link to="/all-notice" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>

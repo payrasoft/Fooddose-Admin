@@ -179,7 +179,7 @@ const Header = () => {
                 <div className="collapse" id="order">
                   <ul className="navbar-nav ps-3">
                     <li>
-                      <Link to="/all-merchants" className="nav-link px-3">
+                      <Link to="/all-order" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>

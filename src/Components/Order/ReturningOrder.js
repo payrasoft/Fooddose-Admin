@@ -1,16 +1,15 @@
-import React from 'react';
-import Header from './../Header';
+import React from "react";
+import Header from "./../Header";
 import { Link } from 'react-router-dom';
 
-const AllOrder = () => {
-    return (
-        <div>
+const ReturningOrder = () => {
+  return (
+    <div>
       <Header />
       <main className="mt-5 pt-5">
         <div className="container-fluid">
-        <div className="d-flex justify-content-between top-content">
-            <h4>All Order page section</h4>{" "}
-            
+          <div className="d-flex justify-content-between top-content">
+            <h4>Returning Order Page Section</h4>{" "}
           </div>
           <div className="card-body border rounded">
             <div className="d-flex justify-content-between table-top">
@@ -47,9 +46,16 @@ const AllOrder = () => {
             </div>
             <div className="table-responsive">
               <table className="table table-bordered">
-                <thead style={{backgroundColor:"#ededed"}}>
+                <thead style={{ backgroundColor: "#ededed" }}>
                   <tr>
-                    <th scope="col"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input"/></th>
+                    <th scope="col">
+                      <input
+                        class="form-check-input mt-0"
+                        type="checkbox"
+                        value=""
+                        aria-label="Checkbox for following text input"
+                      />
+                    </th>
                     <th scope="col">Order ID</th>
                     <th scope="col">Customer Name</th>
                     <th scope="col">Restaurant name</th>
@@ -62,12 +68,18 @@ const AllOrder = () => {
                     <th scope="col">Order Date</th>
                     <th scope="col">Status</th>
                     <th scope="col">Action</th>
-                    
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
-                    <th ><input class="form-check-input  " type="checkbox" value="" aria-label="Checkbox for following text input"/></th>
+                    <th scope="col">
+                      <input
+                        class="form-check-input mt-0"
+                        type="checkbox"
+                        value=""
+                        aria-label="Checkbox for following text input"
+                      />
+                    </th>
                     <th scope="row">01</th>
                     <td>Billal Farabi</td>
                     <td>Hotel seraton</td>
@@ -85,9 +97,7 @@ const AllOrder = () => {
                       <Link to='/invoice'> <i className="fas fa-eye m-1 " ></i></Link>
                       <i className="fas fa-trash text-danger "></i>
                     </td>
-                   </tr>
-                
-                  
+                  </tr>
                 </tbody>
               </table>
             </div>
@@ -95,7 +105,7 @@ const AllOrder = () => {
         </div>
       </main>
     </div>
-    );
+  );
 };
 
-export default AllOrder;
+export default ReturningOrder;

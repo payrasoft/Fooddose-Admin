@@ -241,7 +241,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/add-merchants" className="nav-link px-3">
+                      <Link to="/pending-order" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -249,7 +249,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/pending-merchants" className="nav-link px-3">
+                      <Link to="/rejected-order" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -257,7 +257,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/rejected-merchants" className="nav-link px-3">
+                      <Link to="/progress-order" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -265,7 +265,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/rejected-merchants" className="nav-link px-3">
+                      <Link to="/returning-order" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -345,7 +345,7 @@ const Header = () => {
                 <div className="collapse" id="accounts">
                   <ul className="navbar-nav ps-3">
                     <li>
-                      <Link to="/all-merchants" className="nav-link px-3">
+                      <Link to="/income" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -353,7 +353,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/add-merchants" className="nav-link px-3">
+                      <Link to="/expense" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -361,15 +361,15 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/pending-merchants" className="nav-link px-3">
+                      <Link to="/paid-invoice" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
-                        <span>Paid Inovice</span>
+                        <span>Paid Invoice</span>
                       </Link>
                     </li>
                     <li>
-                      <Link to="/rejected-merchants" className="nav-link px-3">
+                      <Link to="/unpaid-invoice" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -377,7 +377,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/rejected-merchants" className="nav-link px-3">
+                      <Link to="/make-salary" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>

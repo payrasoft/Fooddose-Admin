@@ -21,33 +21,40 @@ import UnpaidInvoice from './Components/Account/UnpaidInvoice';
 import MakeSalary from './Components/Account/MakeSalary';
 import Invoice from './Components/Invoice';
 import Edit from './Components/Edit';
-
+import AddNotice from "./Components/Notice/AddNotice";
+import AllNotice from "./Components/Notice/AllNotice";
+import AllRider from "./Components/Rider/AllRider";
+import PendingRider from "./Components/Rider/PendingRider";
+import RejectedRider from "./Components/Rider/RejectedRider";
 function App() {
   return (
     <div>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Dashboard />}> </Route>
-          <Route path="all-merchants" element={<AllMerchants />}> </Route>
-          <Route path="add-merchants" element={<AddMerchants />}> </Route>
-          <Route path="pending-merchants" element={<PendingMerchants />}> </Route>
-          <Route path="rejected-merchants" element={<RejectedMerchants />}> </Route>
+        <Route path="all-merchants" element={<AllMerchants />} />
+          <Route path="add-merchants" element={<AddMerchants />} />
+          <Route path="pending-merchants" element={<PendingMerchants />} />
+          <Route path="rejected-merchants" element={<RejectedMerchants />} />
+
 
           <Route path="all-order" element={<AllOrder /> }> </Route>
           <Route path="pending-order" element={<PendingOrder />}> </Route>
           <Route path="rejected-order" element={<RejectedOrder />}> </Route>
           <Route path="progress-order" element={<ProgressOrder />}> </Route>
           <Route path="returning-order" element={<ReturningOrder />}> </Route>
-
           <Route path="income" element={<Income />}> </Route>
           <Route path="expense" element={<Expense/>}> </Route>
           <Route path="paid-invoice" element={<PaidInvoice />}> </Route>
           <Route path="unpaid-invoice" element={<UnpaidInvoice />}> </Route>
           <Route path="make-salary" element={<MakeSalary />}> </Route>
-
           <Route path="invoice" element={<Invoice />}> </Route>
           <Route path="edit" element={<Edit />}> </Route>
-          
+          <Route path="all-rider" element={<AllRider />} />
+          <Route path="pending-rider" element={<PendingRider />} />
+          <Route path="rejected-rider" element={<RejectedRider />} />
+          <Route path="add-notice" element={<AddNotice />} />
+          <Route path="all-notice" element={<AllNotice />} />
+          <Route path="/" element={<Dashboard />} />       
         </Routes>
       </BrowserRouter>
 

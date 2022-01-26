@@ -29,6 +29,8 @@ import RejectedRider from "./Components/Rider/RejectedRider";
 import AddRider from "./Components/Rider/AddRider";
 import AddArea from "./Components/Area/AddArea";
 import ManageArea from "./Components/Area/ManageArea";
+import WebsiteSettings from "./Components/Settings/WebsiteSettings";
+import GeneralSetting from "./Components/Settings/GeneralSetting";
 
 function App() {
   return (
@@ -64,6 +66,10 @@ function App() {
           
           <Route path="add-notice" element={<AddNotice />} />
           <Route path="all-notice" element={<AllNotice />} />
+
+          <Route path="general-settings" element={<GeneralSetting />} />
+          <Route path="website-settings" element={<WebsiteSettings />} />
+
           <Route path="/" element={<Dashboard />} />       
         </Routes>
       </BrowserRouter>

@@ -51,6 +51,7 @@ const RejectedRider = () => {
               <table className="table table-bordered">
                 <thead style={{ backgroundColor: "#ededed" }}>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="col">ID</th>
                     <th scope="col">Image</th>
                     <th scope="col">Full Name</th>
@@ -66,6 +67,7 @@ const RejectedRider = () => {
                 </thead>
                 <tbody>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Image</td>
                     <td>Rider Name</td>
@@ -86,6 +88,7 @@ const RejectedRider = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Image</td>
                     <td>Rider Name</td>
@@ -106,6 +109,7 @@ const RejectedRider = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Image</td>
                     <td>Rider Name</td>
@@ -126,6 +130,7 @@ const RejectedRider = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Image</td>
                     <td>Rider Name</td>

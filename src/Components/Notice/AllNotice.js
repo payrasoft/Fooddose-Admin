@@ -51,6 +51,7 @@ const AllNotice = () => {
               <table className="table table-bordered">
                 <thead style={{ backgroundColor: "#ededed" }}>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="col">ID</th>
                     <th scope="col">Heading</th>
                     <th scope="col">Sub-Heading</th>
@@ -63,6 +64,7 @@ const AllNotice = () => {
                 </thead>
                 <tbody>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Eligendi aut corrupt</td>
                     <td>Magni praesentium ma	</td>
@@ -80,6 +82,7 @@ const AllNotice = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Eligendi aut corrupt</td>
                     <td>Magni praesentium ma	</td>
@@ -97,6 +100,7 @@ const AllNotice = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Eligendi aut corrupt</td>
                     <td>Magni praesentium ma	</td>
@@ -114,6 +118,7 @@ const AllNotice = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Eligendi aut corrupt</td>
                     <td>Magni praesentium ma	</td>
@@ -131,6 +136,7 @@ const AllNotice = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Eligendi aut corrupt</td>
                     <td>Magni praesentium ma	</td>

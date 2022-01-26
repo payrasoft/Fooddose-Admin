@@ -51,6 +51,7 @@ const ManageArea = () => {
               <table className="table table-bordered">
                 <thead style={{ backgroundColor: "#ededed" }}>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="col">ID</th>
                     <th scope="col">District Name</th>
                     <th scope="col">District Image</th>
@@ -61,6 +62,7 @@ const ManageArea = () => {
                 </thead>
                 <tbody>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Dhaka</td>
                     <td>District Image</td>
@@ -76,6 +78,7 @@ const ManageArea = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Dhaka</td>
                     <td>District Image</td>
@@ -91,6 +94,7 @@ const ManageArea = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Dhaka</td>
                     <td>District Image</td>
@@ -106,6 +110,7 @@ const ManageArea = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Dhaka</td>
                     <td>District Image</td>
@@ -121,6 +126,7 @@ const ManageArea = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Dhaka</td>
                     <td>District Image</td>

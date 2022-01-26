@@ -355,7 +355,7 @@ const Header = () => {
                 <div className="collapse" id="delivery">
                   <ul className="navbar-nav ps-3">
                     <li>
-                      <Link to="/all-merchants" className="nav-link px-3">
+                      <Link to="/add-area" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>
@@ -363,7 +363,7 @@ const Header = () => {
                       </Link>
                     </li>
                     <li>
-                      <Link to="/add-merchants" className="nav-link px-3">
+                      <Link to="/manage-area" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>
                         </span>

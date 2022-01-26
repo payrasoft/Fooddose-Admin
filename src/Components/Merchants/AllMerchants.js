@@ -7,7 +7,7 @@ const AllMerchants = () => {
     <div>
       <Header />
       <main className="mt-5 pt-5">
-        <div className="container-fluid">
+        <div className="container px-4">
           <div className="d-flex justify-content-between top-content">
             <h4>All Merchants</h4>{" "}
             <button className="btn btn-success mb-2"><Link to="/add-merchants">Add Merchant</Link></button>
@@ -49,85 +49,102 @@ const AllMerchants = () => {
               <table className="table table-bordered">
                 <thead style={{backgroundColor:"#ededed"}}>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="col">ID</th>
-                    <th scope="col">Merchant Name</th>
-                    <th scope="col">Mobile</th>
+                    <th scope="col">Name</th>
                     <th scope="col">Business Name</th>
-                    <th scope="col">Bkash Number</th>
-                    <th scope="col">Rocket Number</th>
+                    <th scope="col">Mobile</th>
+                    <th scope="col">Total Food</th>
+                    <th scope="col">Delivered</th>
+                    <th scope="col">Income</th>
                     <th scope="col">Status</th>
-                    <th scope="col">Created At</th>
+                    <th scope="col">Joined At</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Demo</td>
-                    <td>+01836288648</td>
                     <td>Fooddoose Merchant</td>
                     <td>+01836288648</td>
-                    <td>+01836288648</td>
-                    <td>Approved</td>
-                    <td>2021-12-25 01:33:22</td>
-                    <td>
-                      <i className="fas fa-edit me-3" style={{color: "#660000"}}></i>
+                    <td className="text-center">20</td>
+                    <td className="text-center">20</td>
+                    <td className="text-center">20000 ৳</td>
+                    <td>Active</td>
+                    <td>2021-12-25</td>
+                    <td style={{minWidth: "100px"}}>
+                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
+                      <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Demo</td>
-                    <td>+01836288648</td>
                     <td>Fooddoose Merchant</td>
                     <td>+01836288648</td>
-                    <td>+01836288648</td>
-                    <td>Approved</td>
-                    <td>2021-12-25 01:33:22</td>
-                    <td>
-                      <i className="fas fa-edit me-3" style={{color: "#660000"}}></i>
+                    <td className="text-center">10</td>
+                    <td className="text-center">10</td>
+                    <td className="text-center">1000 ৳</td>
+                    <td>Inctive</td>
+                    <td>2021-12-23</td>
+                    <td style={{minWidth: "100px"}}>
+                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
+                      <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Demo</td>
-                    <td>+01836288648</td>
                     <td>Fooddoose Merchant</td>
                     <td>+01836288648</td>
-                    <td>+01836288648</td>
-                    <td>Approved</td>
-                    <td>2021-12-25 01:33:22</td>
-                    <td>
-                      <i className="fas fa-edit me-3" style={{color: "#660000"}}></i>
+                    <td className="text-center">10</td>
+                    <td className="text-center">10</td>
+                    <td className="text-center">1000 ৳</td>
+                    <td>Inctive</td>
+                    <td>2021-12-25</td>
+                    <td style={{minWidth: "100px"}}>
+                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
+                      <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Demo</td>
-                    <td>+01836288648</td>
                     <td>Fooddoose Merchant</td>
                     <td>+01836288648</td>
-                    <td>+01836288648</td>
-                    <td>Approved</td>
-                    <td>2021-12-25 01:33:22</td>
-                    <td>
-                      <i className="fas fa-edit me-3" style={{color: "#660000"}}></i>
+                    <td className="text-center">10</td>
+                    <td className="text-center">10</td>
+                    <td className="text-center">10000 ৳</td>
+                    <td>Active</td>
+                    <td>2021-12-25</td>
+                    <td style={{minWidth: "100px"}}>
+                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
+                      <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Demo</td>
-                    <td>+01836288648</td>
                     <td>Fooddoose Merchant</td>
                     <td>+01836288648</td>
-                    <td>+01836288648</td>
-                    <td>Approved</td>
-                    <td>2021-12-25 01:33:22</td>
-                    <td>
-                      <i className="fas fa-edit me-3" style={{color: "#660000"}}></i>
+                    <td className="text-center">10</td>
+                    <td className="text-center">10</td>
+                    <td className="text-center">1000 ৳</td>
+                    <td>Active</td>
+                    <td>2021-12-25</td>
+                    <td style={{minWidth: "100px"}}>
+                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
+                      <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>

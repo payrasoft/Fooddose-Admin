@@ -284,6 +284,7 @@ const AddMerchants = () => {
                       <input className="form-control" type="time" name="" id="s-close" />
                   </div>
               </div>
+              <button className="btn btn-success mt-2 common-color">Add</button>
             </form>
           </div>
         </div>

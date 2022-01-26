@@ -31,6 +31,8 @@ import AddArea from "./Components/Area/AddArea";
 import ManageArea from "./Components/Area/ManageArea";
 import WebsiteSettings from "./Components/Settings/WebsiteSettings";
 import GeneralSetting from "./Components/Settings/GeneralSetting";
+import AddUsers from "./Components/User/AddUsers";
+import AllUsers from "./Components/User/AllUsers";
 
 function App() {
   return (
@@ -66,6 +68,9 @@ function App() {
           
           <Route path="add-notice" element={<AddNotice />} />
           <Route path="all-notice" element={<AllNotice />} />
+          
+          <Route path="add-users" element={<AddUsers />} />
+          <Route path="all-users" element={<AllUsers />} />
 
           <Route path="general-settings" element={<GeneralSetting />} />
           <Route path="website-settings" element={<WebsiteSettings />} />

@@ -76,6 +76,7 @@ const AddRider = () => {
                   />
                 </div>
               </div>
+              <button className="btn btn-success mt-2 common-color">Add</button>
             </form>
           </div>
         </div>

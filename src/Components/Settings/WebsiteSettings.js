@@ -134,7 +134,7 @@ const WebsiteSettings = () => {
                   />
                 </div>
               </div>
-              <button className="btn btn-success mt-2">Upload</button>
+              <button className="btn btn-success mt-2 common-color">Upload</button>
             </form>
           </div>
         </div>

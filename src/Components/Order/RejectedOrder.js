@@ -2,14 +2,16 @@ import React from 'react';
 import Header from './../Header';
 import { Link } from 'react-router-dom';
 
-const AllOrder = () => {
+const RejectedOrder = () => {
     return (
         <div>
       <Header />
       <main className="mt-5 pt-5">
         <div className="container-fluid">
         <div className="d-flex justify-content-between top-content">
-            <h4>All Order page section</h4>{" "}
+            <h4>
+            Rejected Order Page Section
+            </h4>{" "}
             
           </div>
           <div className="card-body border rounded">
@@ -46,10 +48,10 @@ const AllOrder = () => {
               </div>
             </div>
             <div className="table-responsive">
-              <table className="table table-bordered">
+            <table className="table table-bordered">
                 <thead style={{backgroundColor:"#ededed"}}>
                   <tr>
-                    <th scope="col"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input"/></th>
+                  <th scope="col"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input"/></th>
                     <th scope="col">Order ID</th>
                     <th scope="col">Customer Name</th>
                     <th scope="col">Restaurant name</th>
@@ -67,7 +69,7 @@ const AllOrder = () => {
                 </thead>
                 <tbody>
                   <tr>
-                    <th ><input class="form-check-input  " type="checkbox" value="" aria-label="Checkbox for following text input"/></th>
+                  <th scope="col"><input class="form-check-input mt-0" type="checkbox" value="" aria-label="Checkbox for following text input"/></th>
                     <th scope="row">01</th>
                     <td>Billal Farabi</td>
                     <td>Hotel seraton</td>
@@ -87,7 +89,6 @@ const AllOrder = () => {
                     </td>
                    </tr>
                 
-                  
                 </tbody>
               </table>
             </div>
@@ -98,4 +99,4 @@ const AllOrder = () => {
     );
 };
 
-export default AllOrder;
+export default RejectedOrder;

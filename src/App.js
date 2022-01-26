@@ -26,6 +26,10 @@ import AllNotice from "./Components/Notice/AllNotice";
 import AllRider from "./Components/Rider/AllRider";
 import PendingRider from "./Components/Rider/PendingRider";
 import RejectedRider from "./Components/Rider/RejectedRider";
+import AddRider from "./Components/Rider/AddRider";
+import AddArea from "./Components/Area/AddArea";
+import ManageArea from "./Components/Area/ManageArea";
+
 function App() {
   return (
     <div>
@@ -49,9 +53,15 @@ function App() {
           <Route path="make-salary" element={<MakeSalary />}> </Route>
           <Route path="invoice" element={<Invoice />}> </Route>
           <Route path="edit" element={<Edit />}> </Route>
+
+          <Route path="add-rider" element={<AddRider />} />
           <Route path="all-rider" element={<AllRider />} />
           <Route path="pending-rider" element={<PendingRider />} />
           <Route path="rejected-rider" element={<RejectedRider />} />
+          
+          <Route path="add-area" element={<AddArea />} />
+          <Route path="manage-area" element={<ManageArea />} />
+          
           <Route path="add-notice" element={<AddNotice />} />
           <Route path="all-notice" element={<AllNotice />} />
           <Route path="/" element={<Dashboard />} />       

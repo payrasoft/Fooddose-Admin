@@ -26,6 +26,7 @@ import AllNotice from "./Components/Notice/AllNotice";
 import AllRider from "./Components/Rider/AllRider";
 import PendingRider from "./Components/Rider/PendingRider";
 import RejectedRider from "./Components/Rider/RejectedRider";
+
 import AddIncome from './Components/Account/AddIncome';
 import EditAllOrder from './Components/Order/EditAllOrder';
 import AddExpense from './Components/Account/AddExpense';
@@ -36,6 +37,16 @@ import EditPending from './Components/Order/EditPending';
 import EditRejected from './Components/Order/EditRejected';
 import EditProgress from "./Components/Order/EditProgress";
 import EditReturning from './Components/Order/EditReturning';
+
+import AddRider from "./Components/Rider/AddRider";
+import AddArea from "./Components/Area/AddArea";
+import ManageArea from "./Components/Area/ManageArea";
+import WebsiteSettings from "./Components/Settings/WebsiteSettings";
+import GeneralSetting from "./Components/Settings/GeneralSetting";
+import AddUsers from "./Components/User/AddUsers";
+import AllUsers from "./Components/User/AllUsers";
+
+
 function App() {
   return (
     <div>
@@ -71,12 +82,29 @@ function App() {
           <Route path="invoice" element={<Invoice />}> </Route>
           <Route path="edit" element={<Edit />}> </Route>
 
+
+
+          <Route path="add-rider" element={<AddRider />} />
+
           <Route path="all-rider" element={<AllRider />} />
           <Route path="pending-rider" element={<PendingRider />} />
           <Route path="rejected-rider" element={<RejectedRider />} />
           
+
+
+          <Route path="add-area" element={<AddArea />} />
+          <Route path="manage-area" element={<ManageArea />} />
+          
+
           <Route path="add-notice" element={<AddNotice />} />
           <Route path="all-notice" element={<AllNotice />} />
+          
+          <Route path="add-users" element={<AddUsers />} />
+          <Route path="all-users" element={<AllUsers />} />
+
+          <Route path="general-settings" element={<GeneralSetting />} />
+          <Route path="website-settings" element={<WebsiteSettings />} />
+
           <Route path="/" element={<Dashboard />} />       
         </Routes>
       </BrowserRouter>

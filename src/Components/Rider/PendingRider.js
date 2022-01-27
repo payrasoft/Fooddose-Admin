@@ -51,6 +51,7 @@ const PendingRider = () => {
               <table className="table table-bordered">
                 <thead style={{ backgroundColor: "#ededed" }}>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="col">ID</th>
                     <th scope="col">Image</th>
                     <th scope="col">Full Name</th>
@@ -64,6 +65,7 @@ const PendingRider = () => {
                 </thead>
                 <tbody>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Image</td>
                     <td>Rider Name</td>
@@ -82,6 +84,7 @@ const PendingRider = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Image</td>
                     <td>Rider Name</td>
@@ -100,6 +103,7 @@ const PendingRider = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Image</td>
                     <td>Rider Name</td>
@@ -118,6 +122,7 @@ const PendingRider = () => {
                     </td>
                   </tr>
                   <tr>
+                    <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
                     <td>Image</td>
                     <td>Rider Name</td>

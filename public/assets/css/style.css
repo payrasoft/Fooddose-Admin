@@ -72,7 +72,8 @@ button {
 }
 
 .top-content button,
-.table-top button {
+.table-top button,
+.common-color {
   background-color: #660000 !important;
   border: #660000;
 }

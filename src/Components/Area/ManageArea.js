@@ -2,21 +2,23 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import Header from '../Header';
 
-const PendingMerchants = () => {
+const ManageArea = () => {
     return (
         <div>
-              <Header />
+               <Header />
       <main className="mt-5 pt-5">
         <div className="container px-4">
           <div className="d-flex justify-content-between top-content">
-            <h4>Pending Merchants</h4>{" "}
-            <button className="btn btn-success mb-2"><Link to="/all-merchants">All Merchant</Link></button>
+            <h4>Manage Area</h4>{" "}
+            <button className="btn btn-success mb-2">
+              <Link to="/add-area">Add Area</Link>
+            </button>
           </div>
           <div className="card-body border rounded">
             <div className="d-flex justify-content-between table-top">
               <input
                 className="form-control mb-3"
-                style={{ width: "40%" }}
+                style={{ width: "30%" }}
                 type="text"
                 name=""
                 id=""
@@ -47,16 +49,14 @@ const PendingMerchants = () => {
             </div>
             <div className="table-responsive">
               <table className="table table-bordered">
-                <thead style={{backgroundColor:"#ededed"}}>
+                <thead style={{ backgroundColor: "#ededed" }}>
                   <tr>
                     <th><input type="checkbox" name="" id="" /></th>
                     <th scope="col">ID</th>
-                    <th scope="col">Name</th>
-                    <th scope="col">Business Name</th>
-                    <th scope="col">Mobile</th>
-                    <th scope="col">Location</th>
-                    <th scope="col">Status</th>
-                    <th scope="col">Joined At</th>
+                    <th scope="col">District Name</th>
+                    <th scope="col">District Image</th>
+                    <th scope="col">District Banner Image</th>
+                    <th scope="col">Created At</th>
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
@@ -64,75 +64,80 @@ const PendingMerchants = () => {
                   <tr>
                     <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td>Mirpur, Dhaka</td>
-                    <td>Pending</td>
+                    <td>Dhaka</td>
+                    <td>District Image</td>
+                    <td>District Banner Image</td>
                     <td>2021-12-25</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
+                    <td style={{ minWidth: "100px" }}>
+                      <i
+                        className="fas fa-edit"
+                        style={{ color: "#660000" }}
+                      ></i>
+                      <i className="fas fa-eye mx-2"></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>
                   <tr>
                     <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td>Mirpur, Dhaka</td>
-                    <td>Pending</td>
+                    <td>Dhaka</td>
+                    <td>District Image</td>
+                    <td>District Banner Image</td>
                     <td>2021-12-25</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
+                    <td style={{ minWidth: "100px" }}>
+                      <i
+                        className="fas fa-edit"
+                        style={{ color: "#660000" }}
+                      ></i>
+                      <i className="fas fa-eye mx-2"></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>
                   <tr>
                     <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td>Mirpur, Dhaka</td>
-                    <td>Pending</td>
+                    <td>Dhaka</td>
+                    <td>District Image</td>
+                    <td>District Banner Image</td>
                     <td>2021-12-25</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
+                    <td style={{ minWidth: "100px" }}>
+                      <i
+                        className="fas fa-edit"
+                        style={{ color: "#660000" }}
+                      ></i>
+                      <i className="fas fa-eye mx-2"></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>
                   <tr>
                     <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td>Mirpur, Dhaka</td>
-                    <td>Pending</td>
+                    <td>Dhaka</td>
+                    <td>District Image</td>
+                    <td>District Banner Image</td>
                     <td>2021-12-25</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
+                    <td style={{ minWidth: "100px" }}>
+                      <i
+                        className="fas fa-edit"
+                        style={{ color: "#660000" }}
+                      ></i>
+                      <i className="fas fa-eye mx-2"></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>
                   <tr>
                     <th><input type="checkbox" name="" id="" /></th>
                     <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td>Mirpur, Dhaka</td>
-                    <td>Pending</td>
+                    <td>Dhaka</td>
+                    <td>District Image</td>
+                    <td>District Banner Image</td>
                     <td>2021-12-25</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
+                    <td style={{ minWidth: "100px" }}>
+                      <i
+                        className="fas fa-edit"
+                        style={{ color: "#660000" }}
+                      ></i>
+                      <i className="fas fa-eye mx-2"></i>
                       <i className="fas fa-trash text-danger"></i>
                     </td>
                   </tr>
@@ -146,4 +151,4 @@ const PendingMerchants = () => {
     );
 };
 
-export default PendingMerchants;
+export default ManageArea;

@@ -52,16 +52,16 @@ import AddUsers from "./Components/Admin/User/AddUsers";
 import AllUsers from "./Components/Admin/User/AllUsers";
 import EditOrder from "./Components/Admin/Order/EditOrder";
 
-import AddIncome from './Components/Account/AddIncome';
-import EditAllOrder from './Components/Order/EditAllOrder';
-import AddExpense from './Components/Account/AddExpense';
-import AddPaidInvo from './Components/Account/AddPaidInvo';
-import AddUnpaid from './Components/Account/AddUnpaid';
-import AddSalary from './Components/Account/AddSalary';
-import EditPending from './Components/Order/EditPending';
-import EditRejected from './Components/Order/EditRejected';
-import EditProgress from "./Components/Order/EditProgress";
-import EditReturning from './Components/Order/EditReturning';
+import AddIncome from './Components/Admin/Account/AddIncome';
+import EditAllOrder from './Components/Admin/Order/EditAllOrder';
+import AddExpense from './Components/Admin/Account/AddExpense';
+import AddPaidInvo from './Components/Admin/Account/AddPaidInvo';
+import AddUnpaid from './Components/Admin/Account/AddUnpaid';
+import AddSalary from './Components/Admin/Account/AddSalary';
+import EditPending from './Components/Admin/Order/EditPending';
+import EditRejected from './Components/Admin/Order/EditRejected';
+import EditProgress from "./Components/Admin/Order/EditProgress";
+import EditReturning from './Components/Admin/Order/EditReturning';
 
 
 function App() {

@@ -93,7 +93,7 @@ const ReturningOrderMerchant = () => {
                     <td>Pending</td>
                     <td className="d-flex justify-content-center align-items-center">
                       
-                      <Link to='/edit-order-merchant'> <i className="fas fa-edit " style={{color: "#660000"}}></i></Link>
+                      <Link to='/edit-returning-order'> <i className="fas fa-edit " style={{color: "#660000"}}></i></Link>
                       <Link to='/order-invoice-merchant'> <i className="fas fa-eye m-1 " ></i></Link>
                       <i className="fas fa-trash text-danger "></i>
                     </td>

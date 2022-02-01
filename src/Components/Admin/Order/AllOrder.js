@@ -82,7 +82,7 @@ const AllOrder = () => {
                     <td className="d-flex justify-content-center align-items-center">
                   
                       <Link to='/edit-all-order'> <i className="fas fa-edit " style={{color: "#660000"}}></i></Link>
-                      <Link to='/invoice'> <i className="fas fa-eye m-1 " ></i></Link>
+                      <Link to='/order-invoice'> <i className="fas fa-eye m-1 " ></i></Link>
                       <i className="fas fa-trash text-danger "></i>
                     </td>
                    </tr>

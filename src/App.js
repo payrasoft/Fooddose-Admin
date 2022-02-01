@@ -37,7 +37,7 @@ import Expense from "./Components/Admin/Account/Expense";
 import PaidInvoice from "./Components/Admin/Account/PaidInvoice";
 import UnpaidInvoice from "./Components/Admin/Account/UnpaidInvoice";
 import MakeSalary from "./Components/Admin/Account/MakeSalary";
-import Invoice from "./Components/Admin/Invoice";
+import Invoice from "./Components/Admin/Account/Invoice";
 import AddNotice from "./Components/Admin/Notice/AddNotice";
 import AllNotice from "./Components/Admin/Notice/AllNotice";
 import AllRider from "./Components/Admin/Rider/AllRider";
@@ -62,6 +62,7 @@ import EditPending from './Components/Admin/Order/EditPending';
 import EditRejected from './Components/Admin/Order/EditRejected';
 import EditProgress from "./Components/Admin/Order/EditProgress";
 import EditReturning from './Components/Admin/Order/EditReturning';
+import OrderInvoice from "./Components/Admin/Order/OrderInvoice";
 
 
 function App() {
@@ -93,6 +94,7 @@ function App() {
           <Route path="/paid-invoice-merchant" element={<PaidInvoiceMerchant />} />
           <Route path="/unpaid-invoice-merchant" element={<UnpaidInvoiceMerchant />} />
           <Route path="/make-salary-merchant" element={<MakeSalaryMerchant />} />
+          <Route path="/invoice" element={<Invoice />} />
 
           <Route path="/dashboard-merchant" element={<DashboardMerchant />} />
 
@@ -112,7 +114,7 @@ function App() {
           <Route path="paid-invoice" element={<PaidInvoice />} />
           <Route path="unpaid-invoice" element={<UnpaidInvoice />} />
           <Route path="make-salary" element={<MakeSalary />} />
-          <Route path="invoice" element={<Invoice />} />
+          <Route path="order-invoice" element={<OrderInvoice />} />
           <Route path="edit-order" element={<EditOrder />} />
           <Route path="all-order" element={<AllOrder /> }> </Route>
           <Route path="edit-all-order" element={<EditAllOrder /> }> </Route>

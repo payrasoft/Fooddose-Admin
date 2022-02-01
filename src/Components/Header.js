@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import logo from "../images/logo.png"
 const Header = () => {
   return (
     <div>
@@ -24,7 +25,7 @@ const Header = () => {
           >
             <img
               width="200"
-              src="https://payrasoft.com/wp-content/uploads/2021/12/payrasoft-vertical-logo-1024x128.png"
+              src={logo}
               alt=""
             />
           </Link>
@@ -102,6 +103,218 @@ const Header = () => {
           <nav className="navbar-light">
             <ul className="navbar-nav">
               <li>
+                <Link to="/dashboard-merchant" className="nav-link px-3 active">
+                  <span className="me-2">
+                    <i className="fas fa-home"></i>
+                  </span>
+                  <span>Dashboard Merchant</span>
+                </Link>
+              </li>
+
+              {/* Merchat  */}
+              <li>
+                <Link
+                  className="nav-link px-3 sidebar-link"
+                  data-bs-toggle="collapse"
+                  to="#food"
+                >
+                  <span className="me-2">
+                    <i className="fa fa-hamburger"></i>
+                  </span>
+                  <span>Food</span>
+                  <span className="ms-auto">
+                    <span className="right-icon">
+                      <i className="bi bi-chevron-down"></i>
+                    </span>
+                  </span>
+                </Link>
+                <div className="collapse" id="food">
+                  <ul className="navbar-nav ps-3">
+                    <li>
+                      <Link to="/add-food" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Add Food</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/categories" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Categories</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/all-food" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>All Food</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              {/* Order */}
+              <li>
+                <a
+                  className="nav-link px-3 sidebar-link"
+                  data-bs-toggle="collapse"
+                  href="#order"
+                >
+                  <span className="me-2">
+                    <i className="fab fa-jedi-order"></i>
+                  </span>
+                  <span>Order</span>
+                  <span className="ms-auto">
+                    <span className="right-icon">
+                      <i className="bi bi-chevron-down"></i>
+                    </span>
+                  </span>
+                </a>
+                <div className="collapse" id="order">
+                  <ul className="navbar-nav ps-3">
+                    <li>
+                      <Link to="/all-order-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>All Order</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/pending-order-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Pending Order</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/rejected-order-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Rejected Order</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/progress-order-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Progress Order</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/returning-order-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Returning Order</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              {/* Accounts */}
+              <li>
+                <a
+                  className="nav-link px-3 sidebar-link"
+                  data-bs-toggle="collapse"
+                  href="#accounts"
+                >
+                  <span className="me-2">
+                    <i className="fas fa-user-circle"></i>
+                  </span>
+                  <span>Accounts</span>
+                  <span className="ms-auto">
+                    <span className="right-icon">
+                      <i className="bi bi-chevron-down"></i>
+                    </span>
+                  </span>
+                </a>
+                <div className="collapse" id="accounts">
+                  <ul className="navbar-nav ps-3">
+                    <li>
+                      <Link to="/income-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Income</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/expense-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Expense</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/paid-invoice-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Paid Inovice</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/unpaid-invoice-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>UNPAID Invoice</span>
+                      </Link>
+                    </li>
+                    <li>
+                      <Link to="/make-salary-merchant" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Make Salary</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+              {/* Settings */}
+              <li>
+                <a
+                  className="nav-link px-3 sidebar-link"
+                  data-bs-toggle="collapse"
+                  href="#Settings"
+                >
+                  <span className="me-2">
+                    <i className="fas fa-cog"></i>
+                  </span>
+                  <span>Settings</span>
+                  <span className="ms-auto">
+                    <span className="right-icon">
+                      <i className="bi bi-chevron-down"></i>
+                    </span>
+                  </span>
+                </a>
+                <div className="collapse" id="Settings">
+                  <ul className="navbar-nav ps-3">
+                    <li>
+                      <Link to="/profile" className="nav-link px-3">
+                        <span className="me-2">
+                          <i className="fas fa-list-ul"></i>
+                        </span>
+                        <span>Profile Settings</span>
+                      </Link>
+                    </li>
+                  </ul>
+                </div>
+              </li>
+
+              {/* Admin  */}
+
+              <li>
                 <Link to="/" className="nav-link px-3 active">
                   <span className="me-2">
                     <i className="fas fa-home"></i>
@@ -109,7 +322,6 @@ const Header = () => {
                   <span>Dashboard</span>
                 </Link>
               </li>
-
               <li>
                 <Link
                   className="nav-link px-3 sidebar-link"
@@ -497,7 +709,7 @@ const Header = () => {
                         <span>SEO</span>
                       </Link>
                     </li>
-                    <li>
+                    <li className="mb-5">
                       <Link to="/rejected-merchants" className="nav-link px-3">
                         <span className="me-2">
                           <i className="fas fa-list-ul"></i>

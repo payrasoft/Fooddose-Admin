@@ -111,7 +111,7 @@ const Header = () => {
                 </Link>
               </li>
 
-              {/* Merchat  */}
+              {/* Merchant  */}
               <li>
                 <Link
                   className="nav-link px-3 sidebar-link"
@@ -162,7 +162,7 @@ const Header = () => {
                 <a
                   className="nav-link px-3 sidebar-link"
                   data-bs-toggle="collapse"
-                  href="#order"
+                  href="#order-merchant"
                 >
                   <span className="me-2">
                     <i className="fab fa-jedi-order"></i>
@@ -174,7 +174,7 @@ const Header = () => {
                     </span>
                   </span>
                 </a>
-                <div className="collapse" id="order">
+                <div className="collapse" id="order-merchant">
                   <ul className="navbar-nav ps-3">
                     <li>
                       <Link to="/all-order-merchant" className="nav-link px-3">
@@ -224,7 +224,7 @@ const Header = () => {
                 <a
                   className="nav-link px-3 sidebar-link"
                   data-bs-toggle="collapse"
-                  href="#accounts"
+                  href="#accounts-merchant"
                 >
                   <span className="me-2">
                     <i className="fas fa-user-circle"></i>
@@ -236,7 +236,7 @@ const Header = () => {
                     </span>
                   </span>
                 </a>
-                <div className="collapse" id="accounts">
+                <div className="collapse" id="accounts-merchant">
                   <ul className="navbar-nav ps-3">
                     <li>
                       <Link to="/income-merchant" className="nav-link px-3">
@@ -286,7 +286,7 @@ const Header = () => {
                 <a
                   className="nav-link px-3 sidebar-link"
                   data-bs-toggle="collapse"
-                  href="#Settings"
+                  href="#settings-merchant"
                 >
                   <span className="me-2">
                     <i className="fas fa-cog"></i>
@@ -298,7 +298,7 @@ const Header = () => {
                     </span>
                   </span>
                 </a>
-                <div className="collapse" id="Settings">
+                <div className="collapse" id="settings-merchant">
                   <ul className="navbar-nav ps-3">
                     <li>
                       <Link to="/profile" className="nav-link px-3">

@@ -80,10 +80,9 @@ const AllOrder = () => {
                     <td>2021-12-25 01:33:22</td>
                     <td>Pending</td>
                     <td className="d-flex justify-content-center align-items-center">
-                      
-                      <Link to='/edit-order'> <i className="fas fa-edit " style={{color: "#660000"}}></i></Link>
+                  
                       <Link to='/edit-all-order'> <i className="fas fa-edit " style={{color: "#660000"}}></i></Link>
-                      <Link to='/order-invoice-merchant'> <i className="fas fa-eye m-1 " ></i></Link>
+                      <Link to='/invoice'> <i className="fas fa-eye m-1 " ></i></Link>
                       <i className="fas fa-trash text-danger "></i>
                     </td>
                    </tr>

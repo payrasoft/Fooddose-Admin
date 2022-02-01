@@ -78,8 +78,8 @@ button {
   border: #660000;
 }
 .top-content a {
-  text-decoration: none;
-  color: #fff;
+  text-decoration: none!important;
+  color: #fff!important;
 }
 
 label{
@@ -100,7 +100,10 @@ label{
   }
 }
 
-
+.update-button a{
+  text-decoration: none;
+  color: #fff;
+}
 html {
   overflow: scroll;
   overflow-x: hidden;

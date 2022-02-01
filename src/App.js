@@ -52,6 +52,16 @@ import AddUsers from "./Components/Admin/User/AddUsers";
 import AllUsers from "./Components/Admin/User/AllUsers";
 import EditOrder from "./Components/Admin/Order/EditOrder";
 
+import AddIncome from './Components/Account/AddIncome';
+import EditAllOrder from './Components/Order/EditAllOrder';
+import AddExpense from './Components/Account/AddExpense';
+import AddPaidInvo from './Components/Account/AddPaidInvo';
+import AddUnpaid from './Components/Account/AddUnpaid';
+import AddSalary from './Components/Account/AddSalary';
+import EditPending from './Components/Order/EditPending';
+import EditRejected from './Components/Order/EditRejected';
+import EditProgress from "./Components/Order/EditProgress";
+import EditReturning from './Components/Order/EditReturning';
 
 
 function App() {
@@ -104,14 +114,44 @@ function App() {
           <Route path="make-salary" element={<MakeSalary />} />
           <Route path="invoice" element={<Invoice />} />
           <Route path="edit-order" element={<EditOrder />} />
+          <Route path="all-order" element={<AllOrder /> }> </Route>
+          <Route path="edit-all-order" element={<EditAllOrder /> }> </Route>
+          <Route path="edit-pending-order" element={<EditPending />}> </Route>
+          <Route path="pending-order" element={<PendingOrder />}> </Route>
+          <Route path="rejected-order" element={<RejectedOrder />}> </Route>
+          <Route path="edit-rejected-order" element={<EditRejected />}> </Route>
+          <Route path="progress-order" element={<ProgressOrder />}> </Route>
+          <Route path="edit-progress-order" element={<EditProgress />}> </Route>
+          <Route path="returning-order" element={<ReturningOrder />}> </Route>
+          <Route path="edit-returning-order" element={<EditReturning />}> </Route>
+
+          <Route path="income" element={<Income />}> </Route>
+          <Route path="add-income" element={<AddIncome />}> </Route>
+          <Route path="expense" element={<Expense/>}> </Route>
+          <Route path="add-expense" element={<AddExpense/>}> </Route>
+          <Route path="paid-invoice" element={<PaidInvoice />}> </Route>
+          <Route path="add-paid-invoice" element={<AddPaidInvo />}> </Route>
+          <Route path="unpaid-invoice" element={<UnpaidInvoice />}> </Route>
+          <Route path="add-unpaid-invoice" element={<AddUnpaid />}> </Route>
+          <Route path="make-salary" element={<MakeSalary />}> </Route>
+          <Route path="add-make-salary" element={<AddSalary />}> </Route>
+
+
 
           <Route path="add-rider" element={<AddRider />} />
+
           <Route path="all-rider" element={<AllRider />} />
           <Route path="pending-rider" element={<PendingRider />} />
           <Route path="rejected-rider" element={<RejectedRider />} />
 
           <Route path="add-area" element={<AddArea />} />
           <Route path="manage-area" element={<ManageArea />} />
+          
+
+
+          <Route path="add-area" element={<AddArea />} />
+          <Route path="manage-area" element={<ManageArea />} />
+          
 
           <Route path="add-notice" element={<AddNotice />} />
           <Route path="all-notice" element={<AllNotice />} />

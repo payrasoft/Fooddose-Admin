@@ -4,19 +4,116 @@ import { Link } from "react-router-dom";
 import "./Invoice.css";
 
 const Invoice = () => {
+  
   return (
     <div>
       <Header />
-      <main className="mt-5 pt-5">
-        <div className="container-fluid">
-          {/* <div className="d-flex justify-content-between top-content">
-            <h4>Expense Page Section</h4>{" "}
-            <button className="btn btn-success mb-2"><Link to="/add-merchants">Add Expense Page</Link></button>
-            
-          </div> */}
-          <div className="card-body ">
-            
-            <div className="row">
+      <main className="mt-5  pt-5">
+        <div className="container ">
+        
+        <div className=" container-fluid pe-5 pt-3  text-end">
+        <button className="btn btn-success px-5 me-4 fw-bold" type="submit">Print</button>
+        </div>
+          <div className="card-body border overflow-hidden position-absolute ">
+          <h2 className="unpaid bg-danger border border-secondary border-3 text-white text-center ">
+                  UNPAID
+                </h2>
+            <div className="row px-5 pt-3">
+              <div className="col-md-6">
+              <img className="w-75  pt-2" src="https://payrasoft.com/wp-content/uploads/2021/12/payrasoft-vertical-logo-1024x128.png" alt="" />
+              </div>
+              <div className="col-md-6 mb-5 pb-3">
+              
+              </div>
+                
+                
+              
+
+              <div className="col-md-6"></div>
+              <div className="col-md-6 text-end mt-1">
+                <h5>Host Dokan</h5>
+                <p>Agrani Super Market(3rd Floor) Kalukhali,Rajbari.</p>
+                <p>
+                  +880 1929 79 77 35 <br />
+                  email: support@hostdokan.com
+                </p>
+              </div>
+              <div className="bg-light p-2">
+                <h4 className="bg-light">Invoice #5992</h4>
+                <p>Invoice Date: Wednesday, November 24th, 2021</p>
+              </div>
+              <div className="py-2">
+                <p className="fw-bold">Invoiced To</p>
+                <p>
+                  Payra Soft <br />
+                  ATTN: Payra Soft <br />
+                  2/2 C Purana Polton <br />
+                  Dhaka, Bangladesh, 1200 <br />
+                  Tax ID:
+                </p>
+              </div>
+
+              <table className="table table-bordered">
+                <thead style={{ backgroundColor: "#ededed" }}>
+                  <tr>
+                    <th className="col-8 text-center">Description</th>
+                    <th>Total</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      Domain Renewal - iconmedicalbd.com - 1 Year/s (10/25/2021
+                      - 10/24/2022) + DNS Management + Email Forwarding
+                    </td>
+                    <th>Tk 800.00BDT</th>
+                  </tr>
+                  <tr style={{ backgroundColor: "#ededed" }}>
+                    <th className="text-end">Subtotal</th>
+                    <th>Tk 800.00BDT</th>
+                  </tr>
+                  <tr style={{ backgroundColor: "#ededed" }}>
+                    <th className="text-end">Credit</th>
+                    <th>Tk 00.00BDT</th>
+                  </tr>
+
+                  <tr style={{ backgroundColor: "#ededed" }}>
+                    <th className="text-end">Total</th>
+                    <th>Tk 800.00BDT</th>
+                  </tr>
+                </tbody>
+              </table>
+
+              <h5>Transactions</h5>
+              <table className="table ">
+                <thead style={{backgroundColor:"#ededed"}}>
+                  <tr>
+                    <th scope="col">Transaction Date</th>
+                    <th scope="col">Gateway </th>
+                    <th scope="col">Transaction ID</th>
+                    <th scope="col">Amount</th>
+                    
+                  </tr>
+                </thead>
+                <tbody>
+                <tr >
+                <th></th>
+                  <th className='text-end' >No Related Transactions Found</th>
+                </tr>
+                  <tr style={{backgroundColor:"#ededed"}}>
+                        <th></th>
+                        <th></th>
+                    <th className="" >Balance</th>
+                    <th >Tk 800.00BDT</th>
+                   </tr>
+                  
+                  
+                   
+                </tbody>
+              </table>
+            </div>
+
+            {/* <div className="row">
               <div className="col-md-8 ">
                 <div className="row ">
                   <div className="d-flex justify-content-between border rounded bg-light p-2 mb-3">
@@ -113,7 +210,7 @@ const Invoice = () => {
               </div>
               <h4>comment</h4>
               <hr className="w-50" />
-            </div>
+            </div> */}
           </div>
         </div>
       </main>

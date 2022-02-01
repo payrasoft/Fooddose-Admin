@@ -11,8 +11,8 @@ const Income = () => {
           <div className="d-flex justify-content-between top-content">
             <h4>Income Page Section</h4> 
 
-            {/* <!-- Button trigger modal --> */}
-            <button
+            <Link to="/add-income"><button type="submit" className="btn btn-success">Add Income Page</button></Link>
+            {/* <button
               type="button"
               class="btn btn-primary"
               data-bs-toggle="modal"
@@ -20,7 +20,7 @@ const Income = () => {
             >
               Add Income Page
             </button>
-            {/* <!-- Modal --> */}
+            
             <div
               class="modal fade"
               id="exampleModal"
@@ -42,6 +42,7 @@ const Income = () => {
                     ></button>
                   </div>
                   <div class="modal-body">
+
                     <div class="row g-2">
                       <h4>Edit Page</h4>
                       <div class="col-md-6">
@@ -109,7 +110,9 @@ const Income = () => {
                         ></textarea>
                       </div>
                     </div>
+                    
                   </div>
+
                   <div class="modal-footer">
                     <button
                       type="button"
@@ -124,8 +127,8 @@ const Income = () => {
                   </div>
                 </div>
               </div>
-            </div>
-            {/* <!-- Modal end --> */}
+            </div> */}
+            
           </div>
           <div className="card-body border rounded">
             <div className="d-flex justify-content-between table-top">

@@ -9,7 +9,7 @@ const PendingOrder = () => {
       <main className="mt-5 pt-5">
         <div className="container-fluid">
         <div className="d-flex justify-content-between top-content">
-            <h4>Pending Order Page Section</h4>{" "}
+            <h4>Pending Order Page Section</h4>
             
           </div>
           <div className="card-body border rounded">
@@ -81,7 +81,7 @@ const PendingOrder = () => {
                     <td>Pending</td>
                     <td className="d-flex justify-content-center align-items-center">
                       
-                      <Link to='/edit'> <i className="fas fa-edit " style={{color: "#660000"}}></i></Link>
+                      <Link to='/edit-pending-order'> <i className="fas fa-edit " style={{color: "#660000"}}></i></Link>
                       <Link to='/invoice'> <i className="fas fa-eye m-1 " ></i></Link>
                       <i className="fas fa-trash text-danger "></i>
                     </td>

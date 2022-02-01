@@ -81,7 +81,11 @@ const AllOrder = () => {
                     <td>Pending</td>
                     <td className="d-flex justify-content-center align-items-center">
                       
+<<<<<<< HEAD:src/Components/Admin/Order/AllOrder.js
                       <Link to='/edit-order'> <i className="fas fa-edit " style={{color: "#660000"}}></i></Link>
+=======
+                      <Link to='/edit-all-order'> <i className="fas fa-edit " style={{color: "#660000"}}></i></Link>
+>>>>>>> 3a27d6d714fe01a143e87f1a92265b9c5bbf6175:src/Components/Order/AllOrder.js
                       <Link to='/invoice'> <i className="fas fa-eye m-1 " ></i></Link>
                       <i className="fas fa-trash text-danger "></i>
                     </td>

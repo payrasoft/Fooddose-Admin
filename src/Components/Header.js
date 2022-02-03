@@ -488,7 +488,7 @@ const Header = () => {
                 <a
                   className="nav-link px-3 sidebar-link"
                   data-bs-toggle="collapse"
-                  href="#accounts"
+                  href="#accounts-admin"
                 >
                   <span className="me-2">
                     <i className="fas fa-user-circle"></i>
@@ -500,7 +500,7 @@ const Header = () => {
                     </span>
                   </span>
                 </a>
-                <div className="collapse" id="accounts">
+                <div className="collapse" id="accounts-admin">
                   <ul className="navbar-nav ps-3">
                     <li>
                       <Link to="/income" className="nav-link px-3">

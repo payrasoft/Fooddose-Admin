@@ -63,6 +63,7 @@ import EditRejected from './Components/Admin/Order/EditRejected';
 import EditProgress from "./Components/Admin/Order/EditProgress";
 import EditReturning from './Components/Admin/Order/EditReturning';
 import OrderInvoice from "./Components/Admin/Order/OrderInvoice";
+import Edit from "./Components/Admin/Account/Edit";
 
 
 function App() {
@@ -126,6 +127,7 @@ function App() {
           <Route path="edit-progress-order" element={<EditProgress />}> </Route>
           <Route path="returning-order" element={<ReturningOrder />}> </Route>
           <Route path="edit-returning-order" element={<EditReturning />}> </Route>
+          <Route path="edit" element={<Edit />}> </Route>
 
           <Route path="income" element={<Income />}> </Route>
           <Route path="add-income" element={<AddIncome />}> </Route>

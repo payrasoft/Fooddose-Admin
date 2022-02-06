@@ -1,8 +1,22 @@
-import React from "react";
+import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../Header";
 
-const AddMerchants = () => {
+const AddMerchants = (props) => {
+
+
+  const merchant = useState(props.merchant)
+  const form = useRef(null)
+
+
+  const submit = e => {
+    e.preventDefault()
+    const data = new FormData(form.current)
+    fetch('http://127.0.0.1:8000/api/merchant', { method: 'POST', body: data})
+      .then(res => res.json())
+      .then(json => console.log(json.merchant))
+  }
+
   return (
     <div>
       <Header />
@@ -15,7 +29,7 @@ const AddMerchants = () => {
             </button>
           </div>
           <div className="card-body border rounded">
-            <form className="add-merchant">
+            <form ref={form} onSubmit={submit} className="add-merchant">
               <h5 className="text-success mt-2">Merchant Information</h5>
               <div className="row">
                 <div className="col-lg-6 col-md-6 col-sm-6">
@@ -23,7 +37,7 @@ const AddMerchants = () => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="name"
                     id="m-name"
                     placeholder="Merchant Name"
                   />
@@ -33,7 +47,7 @@ const AddMerchants = () => {
                   <input
                     className="form-control"
                     type="email"
-                    name=""
+                    name="email"
                     id="m-email"
                     placeholder="Email"
                   />

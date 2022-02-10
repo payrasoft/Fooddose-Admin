@@ -68,7 +68,7 @@ const AllFood = () => {
                     <td>F-265</td>
                     <td className="text-center">200 ৳</td>
                     <td>Active</td>
-                    <td style={{minWidth: "100px"}}>
+                    <td className="d-flex align-items-center">
                       <i className="fas fa-edit" style={{color: "#660000"}}></i>
                       <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
@@ -84,7 +84,7 @@ const AllFood = () => {
                     <td>F-265</td>
                     <td className="text-center">200 ৳</td>
                     <td>Active</td>
-                    <td style={{minWidth: "100px"}}>
+                    <td className="d-flex align-items-center">
                       <i className="fas fa-edit" style={{color: "#660000"}}></i>
                       <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
@@ -100,7 +100,7 @@ const AllFood = () => {
                     <td>F-265</td>
                     <td className="text-center">200 ৳</td>
                     <td>Active</td>
-                    <td style={{minWidth: "100px"}}>
+                    <td className="d-flex align-items-center">
                       <i className="fas fa-edit" style={{color: "#660000"}}></i>
                       <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
@@ -116,7 +116,7 @@ const AllFood = () => {
                     <td>F-265</td>
                     <td className="text-center">200 ৳</td>
                     <td>Active</td>
-                    <td style={{minWidth: "100px"}}>
+                    <td className="d-flex align-items-center">
                       <i className="fas fa-edit" style={{color: "#660000"}}></i>
                       <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
@@ -132,7 +132,7 @@ const AllFood = () => {
                     <td>F-265</td>
                     <td className="text-center">200 ৳</td>
                     <td>Active</td>
-                    <td style={{minWidth: "100px"}}>
+                    <td className="d-flex align-items-center">
                       <i className="fas fa-edit" style={{color: "#660000"}}></i>
                       <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>
@@ -148,7 +148,7 @@ const AllFood = () => {
                     <td>F-265</td>
                     <td className="text-center">200 ৳</td>
                     <td>Active</td>
-                    <td style={{minWidth: "100px"}}>
+                    <td className="d-flex align-items-center">
                       <i className="fas fa-edit" style={{color: "#660000"}}></i>
                       <i className='fas fa-eye mx-2'></i>
                       <i className="fas fa-trash text-danger"></i>

@@ -1,6 +1,7 @@
 import React from "react";
 import Header from "../../Header";
 import Select from "react-select";
+import { Link } from "react-router-dom";
 
 const data = [
   { value: "ocean", label: "Ocean", color: "#00B8D9", isFixed: true },
@@ -82,7 +83,7 @@ const AddFood = () => {
                 </div>
               </div>
 
-              <div>
+              <div className="mb-2">
                 <label htmlFor="extra">Extra</label>
                 <Select
                   isMulti
@@ -92,6 +93,7 @@ const AddFood = () => {
                   className="basic-multi-select"
                   classNamePrefix="select"
                 />
+                <Link to="/add-extra-item">Add Extra Item</Link>
               </div>
 
               <div className="">

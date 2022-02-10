@@ -116,7 +116,7 @@ const Categories = () => {
                   themes may show it.
                 </div>
 
-                <button className="btn btn-primary">Add New Category</button>
+                <button className="btn common-color">Add New Category</button>
               </form>
             </div>
             <div className="col-lg-8 col-md-8">

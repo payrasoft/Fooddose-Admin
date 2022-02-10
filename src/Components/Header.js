@@ -95,7 +95,7 @@ const Header = () => {
 
                 <!-- offcanvas --> */}
       <div
-        className="offcanvas offcanvas-start offcanv mt-3 sidebar-nav bg-light"
+        className="offcanvas offcanvas-start offcanv sidebar-nav bg-light"
         tabIndex="-1"
         id="sidebar"
       >

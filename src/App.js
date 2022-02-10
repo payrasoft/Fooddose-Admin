@@ -64,6 +64,8 @@ import EditProgress from "./Components/Admin/Order/EditProgress";
 import EditReturning from './Components/Admin/Order/EditReturning';
 import OrderInvoice from "./Components/Admin/Order/OrderInvoice";
 import Edit from "./Components/Admin/Account/Edit";
+import AddExtraItem from "./Components/Merchant/Food/AddExtraItem";
+import EditExtraItem from "./Components/Merchant/Food/EditExtraItem";
 
 
 function App() {
@@ -75,6 +77,8 @@ function App() {
 
           <Route path="/add-food" element={<AddFood />} />
           <Route path="/categories" element={<Categories />} />
+          <Route path="/add-extra-item" element={<AddExtraItem />} />
+          <Route path="/edit-extra-item" element={<EditExtraItem />} />
           <Route path="/all-food" element={<AllFood />} />
           
           <Route path="/profile" element={<Profile />} />

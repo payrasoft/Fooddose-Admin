@@ -5,7 +5,6 @@ import Header from "../../Header";
 const AddMerchants = (props) => {
 
 
-  const merchant = useState(props.merchant)
   const form = useRef(null)
 
 

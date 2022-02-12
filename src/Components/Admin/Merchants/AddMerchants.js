@@ -1,12 +1,10 @@
-import React, { useRef, useState } from "react";
+import React, { useRef } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../Header";
 
 const AddMerchants = (props) => {
 
-
   const form = useRef(null)
-
 
   const submit = e => {
     e.preventDefault()
@@ -56,7 +54,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="phone"
                     id="mobile"
                     placeholder="Mobile"
                   />
@@ -66,7 +64,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="address"
                     id="address"
                     placeholder="Address"
                   />
@@ -76,7 +74,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="status"
                     id="status"
                     placeholder="Status"
                   />
@@ -86,7 +84,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="password"
-                    name=""
+                    name="password"
                     id="password"
                     placeholder="Password"
                   />
@@ -101,7 +99,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="business_name"
                     id="b-name"
                     placeholder="Business Name"
                   />
@@ -111,7 +109,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="number"
-                    name=""
+                    name="bkash_number"
                     id="bkash"
                     placeholder="Bkash Number"
                   />
@@ -121,7 +119,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="rocket_number"
                     id="rocket"
                     placeholder="Rocet Number"
                   />
@@ -131,7 +129,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="nagad_number"
                     id="nagad"
                     placeholder="Nagad Number"
                   />
@@ -141,7 +139,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="bank_name"
                     id="bank-name"
                     placeholder="Bank Name"
                   />
@@ -151,7 +149,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="account_number"
                     id="a-number"
                     placeholder="Account Number"
                   />
@@ -161,7 +159,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="account_name"
                     id="a-name"
                     placeholder="Account Name"
                   />
@@ -171,7 +169,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="payment_method"
                     id="p-method"
                     placeholder="Payment Method"
                   />
@@ -185,7 +183,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="restaurant[name]"
                     id="r-name"
                     placeholder="Restaurant Name"
                   />
@@ -195,7 +193,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="restaurant[code]"
                     id="r-code"
                     placeholder="Restaurant Code"
                   />
@@ -205,7 +203,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="restaurant[address]"
                     id="r-address"
                     placeholder="Restaurant Address"
                   />
@@ -215,7 +213,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="restaurant[tin]"
                     id="t-number"
                     placeholder="Tin Number"
                   />
@@ -225,7 +223,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="restaurant[since]"
                     id="since"
                     placeholder="Since"
                   />
@@ -235,7 +233,7 @@ const AddMerchants = (props) => {
                   <input
                     className="form-control"
                     type="text"
-                    name=""
+                    name="restaurant[status]"
                     id="r-status"
                     placeholder="Status"
                   />
@@ -245,43 +243,43 @@ const AddMerchants = (props) => {
               <h5 className="text-success mt-3">Schedule Information</h5>
               <div className="days d-flex justify-content-between">
                 <div className="d-flex align-items-center">
-                  <input className="me-2" type="checkbox" name="" id="Saturday" />
+                  <input className="me-2" type="checkbox" name="open_days[]" id="Saturday"  value="Saturday" />
                   <label className="" htmlFor="Saturday">
                     Saturday
                   </label>
                 </div>
                 <div className="d-flex align-items-center">
-                  <input className="me-2" type="checkbox" name="" id="Sunday" />
+                  <input className="me-2" type="checkbox" name="open_days[]" id="Sunday"  value="Sunday" />
                   <label className="" htmlFor="Sunday">
                     Sunday
                   </label>
                 </div>
                 <div className="d-flex align-items-center">
-                  <input className="me-2" type="checkbox" name="" id="Monday" />
+                  <input className="me-2" type="checkbox" name="open_days[]" id="Monday"  value="Monday" />
                   <label className="" htmlFor="Monday">
                     Monday
                   </label>
                 </div>
                 <div className="d-flex align-items-center">
-                  <input className="me-2" type="checkbox" name="" id="Tuesday" />
+                  <input className="me-2" type="checkbox" name="open_days[]" id="Tuesday"  value="Tuesday" />
                   <label className="" htmlFor="Tuesday">
                     Tuesday
                   </label>
                 </div>
                 <div className="d-flex align-items-center">
-                  <input className="me-2" type="checkbox" name="" id="Wednesday" />
+                  <input className="me-2" type="checkbox" name="open_days[]" id="Wednesday"  value="Wednesday" />
                   <label className="" htmlFor="Wednesday">
                     Wednesday
                   </label>
                 </div>
                 <div className="d-flex align-items-center">
-                  <input className="me-2" type="checkbox" name="" id="Thursday" />
+                  <input className="me-2" type="checkbox" name="open_days[]" id="Thursday"  value="Thursday" />
                   <label className="" htmlFor="Thursday">
                     Thursday
                   </label>
                 </div>
                 <div className="d-flex align-items-center">
-                  <input className="me-2" type="checkbox" name="" id="Friday" />
+                  <input className="me-2" type="checkbox" name="open_days[]" id="Friday" value="Friday" />
                   <label className="" htmlFor="Friday">
                     Friday
                   </label>
@@ -290,11 +288,11 @@ const AddMerchants = (props) => {
               <div className="row">
                   <div className="col-lg-6 col-md-6 col-m-6">
                       <label htmlFor="s-open">Shop Open</label>
-                      <input className="form-control" type="time" name="" id="s-open" />
+                      <input className="form-control" type="time" name="open_time" id="s-open" />
                   </div>
                   <div className="col-lg-6 col-md-6 col-m-6">
                       <label htmlFor="s-close">Shop Close</label>
-                      <input className="form-control" type="time" name="" id="s-close" />
+                      <input className="form-control" type="time" name="close_time" id="s-close" />
                   </div>
               </div>
               <button className="btn btn-success mt-2 common-color">Add</button>

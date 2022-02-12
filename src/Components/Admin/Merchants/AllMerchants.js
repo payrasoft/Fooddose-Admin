@@ -1,8 +1,27 @@
 import React from "react";
 import { Link } from "react-router-dom";
 import Header from "../../Header";
+import { useEffect, useState } from "react";
+
 
 const AllMerchants = () => {
+  
+    const [merchants, setMerchants] = useState([])
+
+    const fetchData = () => {
+      fetch("http://127.0.0.1:8000/api/merchants")
+        .then(response => {
+          return response.json()
+        })
+        .then(data => {
+          setMerchants(data)
+        })
+    }
+
+  useEffect(() => {
+    fetchData()
+  }, [])
+
   return (
     <div>
       <Header />
@@ -62,93 +81,29 @@ const AllMerchants = () => {
                     <th scope="col">Action</th>
                   </tr>
                 </thead>
+                {merchants.length > 0 && (
                 <tbody>
-                  <tr>
-                    <th><input type="checkbox" name="" id="" /></th>
-                    <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td className="text-center">20</td>
-                    <td className="text-center">20</td>
-                    <td className="text-center">20000 ৳</td>
-                    <td>Active</td>
-                    <td>2021-12-25</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
-                      <i className="fas fa-trash text-danger"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th><input type="checkbox" name="" id="" /></th>
-                    <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td className="text-center">10</td>
-                    <td className="text-center">10</td>
-                    <td className="text-center">1000 ৳</td>
-                    <td>Inctive</td>
-                    <td>2021-12-23</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
-                      <i className="fas fa-trash text-danger"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th><input type="checkbox" name="" id="" /></th>
-                    <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td className="text-center">10</td>
-                    <td className="text-center">10</td>
-                    <td className="text-center">1000 ৳</td>
-                    <td>Inctive</td>
-                    <td>2021-12-25</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
-                      <i className="fas fa-trash text-danger"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th><input type="checkbox" name="" id="" /></th>
-                    <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td className="text-center">10</td>
-                    <td className="text-center">10</td>
-                    <td className="text-center">10000 ৳</td>
-                    <td>Active</td>
-                    <td>2021-12-25</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
-                      <i className="fas fa-trash text-danger"></i>
-                    </td>
-                  </tr>
-                  <tr>
-                    <th><input type="checkbox" name="" id="" /></th>
-                    <th scope="row">1</th>
-                    <td>Demo</td>
-                    <td>Fooddoose Merchant</td>
-                    <td>+01836288648</td>
-                    <td className="text-center">10</td>
-                    <td className="text-center">10</td>
-                    <td className="text-center">1000 ৳</td>
-                    <td>Active</td>
-                    <td>2021-12-25</td>
-                    <td style={{minWidth: "100px"}}>
-                      <i className="fas fa-edit" style={{color: "#660000"}}></i>
-                      <i className='fas fa-eye mx-2'></i>
-                      <i className="fas fa-trash text-danger"></i>
-                    </td>
-                  </tr>
+                  {merchants.map(merchant => (
+                    <tr>
+                      <th><input type="checkbox" name="" id="" /></th>
+                      <th scope="row">1</th>
+                      <td>{merchant.user.name}</td>
+                      <td>{merchant.business_name}</td>
+                      <td>{merchant.user.phone}</td>
+                      <td className="text-center">20</td>
+                      <td className="text-center">20</td>
+                      <td className="text-center">20000 ৳</td>
+                      <td>{(merchant.status === '0') ? <div>Inactive</div> : <div>Active</div>}</td>
+                      <td>{merchant.created_at}</td>
+                      <td style={{minWidth: "100px"}}>
+                        <i className="fas fa-edit" style={{color: "#660000"}}></i>
+                        <i className='fas fa-eye mx-2'></i>
+                        <i className="fas fa-trash text-danger"></i>
+                      </td>
+                    </tr>
+                    ))}
                 </tbody>
+                )}
               </table>
             </div>
           </div>

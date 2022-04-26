@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../Header";
 import axios from "axios";
+import Cookies from "universal-cookie";
 
 const AddMerchants = (props) => {
   const form = useRef(null);
@@ -12,6 +13,13 @@ const AddMerchants = (props) => {
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
   const [logo, setLogo] = useState(null);
+  const cookies = new Cookies();
+  const [toast, setToast] = useState(false);
+  const [errors, setErrors] = useState({});
+
+  const handleToast = () => {
+    setToast(false);
+  };
 
   const handleFileInput = (e) => {
     setLogo(e.target.files[0]);
@@ -52,6 +60,10 @@ const AddMerchants = (props) => {
     data.append("link", "");
     data.append("logo", logo);
 
+    setTimeout(() => {
+      setToast(false);
+    }, 5000);
+
     fetch(" http://localhost:5000/user/register", {
       method: "POST",
       body: data,
@@ -59,6 +71,22 @@ const AddMerchants = (props) => {
       .then((res) => res.json())
       .then((success) => {
         console.log(success);
+        if (success.accesstoken) {
+          cookies.set("user-token", success.accesstoken, { path: "/" });
+          setToast(true);
+          setName("");
+          setEmail("");
+          setNumber("");
+          setShopName("");
+          setPassword("");
+          setConfirmPassword("");
+          setLogo(null);
+          setErrors({});
+        }
+        if (success.errors) {
+          const error = success.errors;
+          setErrors({ ...error });
+        }
       });
   };
 
@@ -75,6 +103,39 @@ const AddMerchants = (props) => {
             <button className="btn btn-success">
               <Link to="/all-merchants">All Merchant</Link>
             </button>
+          </div>
+          <div
+            aria-live="polite"
+            aria-atomic="true"
+            style={{ position: "relative" }}
+          >
+            <div
+              role="alert"
+              aria-live="assertive"
+              aria-atomic="true"
+              class={`toast ${toast && "show"}`}
+              style={{ position: "absolute", top: "0", right: "0" }}
+            >
+              <div
+                style={{
+                  alignItems: "center",
+                  justifyContent: "space-between",
+                }}
+                class="toast-body bg-success text-white d-flex justify-between"
+              >
+                <h6 style={{ marginBottom: "0px" }}>Registered Successfully</h6>
+                <span
+                  onClick={handleToast}
+                  className="close"
+                  style={{ fontSize: "28px", cursor: "pointer" }}
+                  data-dismiss="toast"
+                  aria-label="Close"
+                  aria-hidden="true"
+                >
+                  &times;
+                </span>
+              </div>
+            </div>
           </div>
           <div className="card-body border rounded">
             <form
@@ -98,6 +159,9 @@ const AddMerchants = (props) => {
                     id="mName"
                     placeholder="Merchant Name"
                   />
+                  <div style={{ color: "red" }}>
+                    {errors.name && errors.name.msg}
+                  </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
                   <label htmlFor="shopName">Shop Name</label>
@@ -110,6 +174,9 @@ const AddMerchants = (props) => {
                     id="ahopName"
                     placeholder="Shop Name"
                   />
+                  <div style={{ color: "red" }}>
+                    {errors.shopName && errors.shopName.msg}
+                  </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
                   <label htmlFor="email">Email</label>
@@ -122,6 +189,9 @@ const AddMerchants = (props) => {
                     id="email"
                     placeholder="Email"
                   />
+                  <div style={{ color: "red" }}>
+                    {errors.email && errors.email.msg}
+                  </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
                   <label htmlFor="number">Number</label>
@@ -134,6 +204,9 @@ const AddMerchants = (props) => {
                     id="number"
                     placeholder="Number"
                   />
+                  <div style={{ color: "red" }}>
+                    {errors.number && errors.number.msg}
+                  </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
                   <label htmlFor="password">Password</label>
@@ -146,6 +219,9 @@ const AddMerchants = (props) => {
                     id="password"
                     placeholder="Password"
                   />
+                  <div style={{ color: "red" }}>
+                    {errors.password && errors.password.msg}
+                  </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
                   <label htmlFor="confirmPassword">Confirm Password</label>
@@ -158,6 +234,9 @@ const AddMerchants = (props) => {
                     id="confirmPassword"
                     placeholder="Confirm Password"
                   />
+                  <div style={{ color: "red" }}>
+                    {errors.confirmPassword && errors.confirmPassword.msg}
+                  </div>
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
                   <label htmlFor="logo">Upload Logo</label>
@@ -169,6 +248,9 @@ const AddMerchants = (props) => {
                     id="logo"
                     placeholder="Logo"
                   />
+                  <div style={{ color: "red" }}>
+                    {errors.logo && errors.logo.msg}
+                  </div>
                 </div>
               </div>
               <button className="btn btn-success mt-2 common-color">Add</button>

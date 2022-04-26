@@ -21,7 +21,7 @@ import UnpaidInvoiceMerchant from "./Components/Merchant/Account/UnpaidInvoice";
 import MakeSalaryMerchant from "./Components/Merchant/Account/MakeSalary";
 import EditOrderMerchant from "./Components/Merchant/Order/EditOrder";
 import OrderInvoiceMerchant from "./Components/Merchant/Order/OrderInvoice";
-// Admin 
+// Admin
 import Dashboard from "./Components/Admin/Dashboard";
 import AddMerchants from "./Components/Admin/Merchants/AddMerchants";
 import AllMerchants from "./Components/Admin/Merchants/AllMerchants";
@@ -52,21 +52,22 @@ import AddUsers from "./Components/Admin/User/AddUsers";
 import AllUsers from "./Components/Admin/User/AllUsers";
 import EditOrder from "./Components/Admin/Order/EditOrder";
 
-import AddIncome from './Components/Admin/Account/AddIncome';
-import EditAllOrder from './Components/Admin/Order/EditAllOrder';
-import AddExpense from './Components/Admin/Account/AddExpense';
-import AddPaidInvo from './Components/Admin/Account/AddPaidInvo';
-import AddUnpaid from './Components/Admin/Account/AddUnpaid';
-import AddSalary from './Components/Admin/Account/AddSalary';
-import EditPending from './Components/Admin/Order/EditPending';
-import EditRejected from './Components/Admin/Order/EditRejected';
+import AddIncome from "./Components/Admin/Account/AddIncome";
+import EditAllOrder from "./Components/Admin/Order/EditAllOrder";
+import AddExpense from "./Components/Admin/Account/AddExpense";
+import AddPaidInvo from "./Components/Admin/Account/AddPaidInvo";
+import AddUnpaid from "./Components/Admin/Account/AddUnpaid";
+import AddSalary from "./Components/Admin/Account/AddSalary";
+import EditPending from "./Components/Admin/Order/EditPending";
+import EditRejected from "./Components/Admin/Order/EditRejected";
 import EditProgress from "./Components/Admin/Order/EditProgress";
-import EditReturning from './Components/Admin/Order/EditReturning';
+import EditReturning from "./Components/Admin/Order/EditReturning";
 import OrderInvoice from "./Components/Admin/Order/OrderInvoice";
 import Edit from "./Components/Admin/Account/Edit";
 import AddExtraItem from "./Components/Merchant/Food/AddExtraItem";
 import EditExtraItem from "./Components/Merchant/Food/EditExtraItem";
-
+import Login from "./Components/Login/Login";
+import PrivateOutlet from "./Components/PrivateOutlet";
 
 function App() {
   return (
@@ -74,103 +75,169 @@ function App() {
       <BrowserRouter>
         <Routes>
           {/* Merchant  */}
+          <Route path="/login" element={<Login />} />
+          <Route to="/*" element={<PrivateOutlet />}>
+            <Route path="/add-food" element={<AddFood />} />
+            <Route path="/categories" element={<Categories />} />
+            <Route path="/add-extra-item" element={<AddExtraItem />} />
+            <Route path="/edit-extra-item" element={<EditExtraItem />} />
+            <Route path="/all-food" element={<AllFood />} />
 
-          <Route path="/add-food" element={<AddFood />} />
-          <Route path="/categories" element={<Categories />} />
-          <Route path="/add-extra-item" element={<AddExtraItem />} />
-          <Route path="/edit-extra-item" element={<EditExtraItem />} />
-          <Route path="/all-food" element={<AllFood />} />
-          
-          <Route path="/profile" element={<Profile />} />
-          <Route path="/update-info" element={<UpdateAdditional />} />
-          <Route path="/update-profile" element={<UpdateProfile />} />
-          <Route path="/update-password" element={<UpdatePassword />} />
+            <Route path="/profile" element={<Profile />} />
+            <Route path="/update-info" element={<UpdateAdditional />} />
+            <Route path="/update-profile" element={<UpdateProfile />} />
+            <Route path="/update-password" element={<UpdatePassword />} />
 
-          <Route path="/all-order-merchant" element={<AllOrderMerchant />} />
-          <Route path="/pending-order-merchant" element={<PendingOrderMerchant />} />
-          <Route path="/rejected-order-merchant" element={<RejectedOrderMerchant />} />
-          <Route path="/progress-order-merchant" element={<ProgressOrderMerchant />} />
-          <Route path="/returning-order-merchant" element={<ReturningOrderMerchant />} />
-          <Route path="/edit-order-merchant" element={<EditOrderMerchant />} />
-          <Route path="/order-invoice-merchant" element={<OrderInvoiceMerchant />} />
+            <Route path="/all-order-merchant" element={<AllOrderMerchant />} />
+            <Route
+              path="/pending-order-merchant"
+              element={<PendingOrderMerchant />}
+            />
+            <Route
+              path="/rejected-order-merchant"
+              element={<RejectedOrderMerchant />}
+            />
+            <Route
+              path="/progress-order-merchant"
+              element={<ProgressOrderMerchant />}
+            />
+            <Route
+              path="/returning-order-merchant"
+              element={<ReturningOrderMerchant />}
+            />
+            <Route
+              path="/edit-order-merchant"
+              element={<EditOrderMerchant />}
+            />
+            <Route
+              path="/order-invoice-merchant"
+              element={<OrderInvoiceMerchant />}
+            />
 
-          <Route path="/income-merchant" element={<IncomeMerchant />} />
-          <Route path="/expense-merchant" element={<ExpenseMerchant />} />
-          <Route path="/paid-invoice-merchant" element={<PaidInvoiceMerchant />} />
-          <Route path="/unpaid-invoice-merchant" element={<UnpaidInvoiceMerchant />} />
-          <Route path="/make-salary-merchant" element={<MakeSalaryMerchant />} />
-          <Route path="/invoice" element={<Invoice />} />
+            <Route path="/income-merchant" element={<IncomeMerchant />} />
+            <Route path="/expense-merchant" element={<ExpenseMerchant />} />
+            <Route
+              path="/paid-invoice-merchant"
+              element={<PaidInvoiceMerchant />}
+            />
+            <Route
+              path="/unpaid-invoice-merchant"
+              element={<UnpaidInvoiceMerchant />}
+            />
+            <Route
+              path="/make-salary-merchant"
+              element={<MakeSalaryMerchant />}
+            />
+            <Route path="/invoice" element={<Invoice />} />
 
-          <Route path="/dashboard-merchant" element={<DashboardMerchant />} />
+            <Route path="/dashboard-merchant" element={<DashboardMerchant />} />
 
-          {/* Admin  */}
-          <Route path="all-merchants" element={<AllMerchants />} />
-          <Route path="add-merchants" element={<AddMerchants />} />
-          <Route path="pending-merchants" element={<PendingMerchants />} />
-          <Route path="rejected-merchants" element={<RejectedMerchants />} />
+            {/* Admin  */}
+            <Route path="all-merchants" element={<AllMerchants />} />
+            <Route path="add-merchants" element={<AddMerchants />} />
+            <Route path="pending-merchants" element={<PendingMerchants />} />
+            <Route path="rejected-merchants" element={<RejectedMerchants />} />
 
-          <Route path="all-order" element={<AllOrder />} />
-          <Route path="pending-order" element={<PendingOrder />} />
-          <Route path="rejected-order" element={<RejectedOrder />} />
-          <Route path="progress-order" element={<ProgressOrder />} />
-          <Route path="returning-order" element={<ReturningOrder />} />
-          <Route path="income" element={<Income />} />
-          <Route path="expense" element={<Expense />} />
-          <Route path="paid-invoice" element={<PaidInvoice />} />
-          <Route path="unpaid-invoice" element={<UnpaidInvoice />} />
-          <Route path="make-salary" element={<MakeSalary />} />
-          <Route path="order-invoice" element={<OrderInvoice />} />
-          <Route path="edit-order" element={<EditOrder />} />
-          <Route path="all-order" element={<AllOrder /> }> </Route>
-          <Route path="edit-all-order" element={<EditAllOrder /> }> </Route>
-          <Route path="edit-pending-order" element={<EditPending />}> </Route>
-          <Route path="pending-order" element={<PendingOrder />}> </Route>
-          <Route path="rejected-order" element={<RejectedOrder />}> </Route>
-          <Route path="edit-rejected-order" element={<EditRejected />}> </Route>
-          <Route path="progress-order" element={<ProgressOrder />}> </Route>
-          <Route path="edit-progress-order" element={<EditProgress />}> </Route>
-          <Route path="returning-order" element={<ReturningOrder />}> </Route>
-          <Route path="edit-returning-order" element={<EditReturning />}> </Route>
-          <Route path="edit" element={<Edit />}> </Route>
+            <Route path="all-order" element={<AllOrder />} />
+            <Route path="pending-order" element={<PendingOrder />} />
+            <Route path="rejected-order" element={<RejectedOrder />} />
+            <Route path="progress-order" element={<ProgressOrder />} />
+            <Route path="returning-order" element={<ReturningOrder />} />
+            <Route path="income" element={<Income />} />
+            <Route path="expense" element={<Expense />} />
+            <Route path="paid-invoice" element={<PaidInvoice />} />
+            <Route path="unpaid-invoice" element={<UnpaidInvoice />} />
+            <Route path="make-salary" element={<MakeSalary />} />
+            <Route path="order-invoice" element={<OrderInvoice />} />
+            <Route path="edit-order" element={<EditOrder />} />
+            <Route path="all-order" element={<AllOrder />}>
+              {" "}
+            </Route>
+            <Route path="edit-all-order" element={<EditAllOrder />}>
+              {" "}
+            </Route>
+            <Route path="edit-pending-order" element={<EditPending />}>
+              {" "}
+            </Route>
+            <Route path="pending-order" element={<PendingOrder />}>
+              {" "}
+            </Route>
+            <Route path="rejected-order" element={<RejectedOrder />}>
+              {" "}
+            </Route>
+            <Route path="edit-rejected-order" element={<EditRejected />}>
+              {" "}
+            </Route>
+            <Route path="progress-order" element={<ProgressOrder />}>
+              {" "}
+            </Route>
+            <Route path="edit-progress-order" element={<EditProgress />}>
+              {" "}
+            </Route>
+            <Route path="returning-order" element={<ReturningOrder />}>
+              {" "}
+            </Route>
+            <Route path="edit-returning-order" element={<EditReturning />}>
+              {" "}
+            </Route>
+            <Route path="edit" element={<Edit />}>
+              {" "}
+            </Route>
 
-          <Route path="income" element={<Income />}> </Route>
-          <Route path="add-income" element={<AddIncome />}> </Route>
-          <Route path="expense" element={<Expense/>}> </Route>
-          <Route path="add-expense" element={<AddExpense/>}> </Route>
-          <Route path="paid-invoice" element={<PaidInvoice />}> </Route>
-          <Route path="add-paid-invoice" element={<AddPaidInvo />}> </Route>
-          <Route path="unpaid-invoice" element={<UnpaidInvoice />}> </Route>
-          <Route path="add-unpaid-invoice" element={<AddUnpaid />}> </Route>
-          <Route path="make-salary" element={<MakeSalary />}> </Route>
-          <Route path="add-make-salary" element={<AddSalary />}> </Route>
+            <Route path="income" element={<Income />}>
+              {" "}
+            </Route>
+            <Route path="add-income" element={<AddIncome />}>
+              {" "}
+            </Route>
+            <Route path="expense" element={<Expense />}>
+              {" "}
+            </Route>
+            <Route path="add-expense" element={<AddExpense />}>
+              {" "}
+            </Route>
+            <Route path="paid-invoice" element={<PaidInvoice />}>
+              {" "}
+            </Route>
+            <Route path="add-paid-invoice" element={<AddPaidInvo />}>
+              {" "}
+            </Route>
+            <Route path="unpaid-invoice" element={<UnpaidInvoice />}>
+              {" "}
+            </Route>
+            <Route path="add-unpaid-invoice" element={<AddUnpaid />}>
+              {" "}
+            </Route>
+            <Route path="make-salary" element={<MakeSalary />}>
+              {" "}
+            </Route>
+            <Route path="add-make-salary" element={<AddSalary />}>
+              {" "}
+            </Route>
 
+            <Route path="add-rider" element={<AddRider />} />
 
+            <Route path="all-rider" element={<AllRider />} />
+            <Route path="pending-rider" element={<PendingRider />} />
+            <Route path="rejected-rider" element={<RejectedRider />} />
 
-          <Route path="add-rider" element={<AddRider />} />
+            <Route path="add-area" element={<AddArea />} />
+            <Route path="manage-area" element={<ManageArea />} />
 
-          <Route path="all-rider" element={<AllRider />} />
-          <Route path="pending-rider" element={<PendingRider />} />
-          <Route path="rejected-rider" element={<RejectedRider />} />
+            <Route path="add-area" element={<AddArea />} />
+            <Route path="manage-area" element={<ManageArea />} />
 
-          <Route path="add-area" element={<AddArea />} />
-          <Route path="manage-area" element={<ManageArea />} />
-          
+            <Route path="add-notice" element={<AddNotice />} />
+            <Route path="all-notice" element={<AllNotice />} />
 
+            <Route path="add-users" element={<AddUsers />} />
+            <Route path="all-users" element={<AllUsers />} />
 
-          <Route path="add-area" element={<AddArea />} />
-          <Route path="manage-area" element={<ManageArea />} />
-          
+            <Route path="general-settings" element={<GeneralSetting />} />
+            <Route path="website-settings" element={<WebsiteSettings />} />
 
-          <Route path="add-notice" element={<AddNotice />} />
-          <Route path="all-notice" element={<AllNotice />} />
-
-          <Route path="add-users" element={<AddUsers />} />
-          <Route path="all-users" element={<AllUsers />} />
-
-          <Route path="general-settings" element={<GeneralSetting />} />
-          <Route path="website-settings" element={<WebsiteSettings />} />
-
-          <Route path="/" element={<Dashboard />} />
+            <Route path="/" element={<Dashboard />} />
+          </Route>
         </Routes>
       </BrowserRouter>
     </div>

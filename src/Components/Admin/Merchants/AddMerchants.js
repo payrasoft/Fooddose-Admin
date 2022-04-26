@@ -1,73 +1,65 @@
 import React, { useRef, useState } from "react";
 import { Link } from "react-router-dom";
 import Header from "../../Header";
+import axios from "axios";
 
 const AddMerchants = (props) => {
   const form = useRef(null);
-
   const [name, setName] = useState("");
   const [shopName, setShopName] = useState("");
-  const [shopLogo, setShopLogo] = useState(null);
-  const [shopAddress, setShopAddress] = useState("");
   const [email, setEmail] = useState("");
-  const [phone, setPhone] = useState("");
-  const [website, setWebsite] = useState("");
+  const [number, setNumber] = useState("");
   const [password, setPassword] = useState("");
   const [confirmPassword, setConfirmPassword] = useState("");
-  const [status, setStatus] = useState("true");
+  const [logo, setLogo] = useState(null);
 
-  const handleChange = (event) => {
-    const name = event.target.name;
-    if (name === "name") {
-      setName(event.target.value);
+  const handleFileInput = (e) => {
+    setLogo(e.target.files[0]);
+  };
+
+  const handleChange = (e) => {
+    const fieldName = e.target.name;
+    if (fieldName === "name") {
+      setName(e.target.value);
     }
-    if (name === "shopName") {
-      setShopName(event.target.value);
+    if (fieldName === "shopName") {
+      setShopName(e.target.value);
     }
-    if (name === "shopAddress") {
-      setShopAddress(event.target.value);
+    if (fieldName === "email") {
+      setEmail(e.target.value);
     }
-    if (name === "email") {
-      setEmail(event.target.value);
+    if (fieldName === "number") {
+      setNumber(e.target.value);
     }
-    if (name === "phone") {
-      setPhone(event.target.value);
+    if (fieldName === "password") {
+      setPassword(e.target.value);
     }
-    if (name === "website") {
-      setWebsite(event.target.value);
-    }
-    if (name === "password") {
-      setPassword(event.target.value);
-    }
-    if (name === "confirmPassword") {
-      setConfirmPassword(event.target.value);
+    if (fieldName === "confirmPassword") {
+      setConfirmPassword(e.target.value);
     }
   };
 
-  const handleFileInput = (event) => {
-    setShopLogo(event.target.files[0]);
-  };
-
-  const submit = (e) => {
+  const submit = async (e) => {
     e.preventDefault();
-    const data = new FormData(form.current);
+    const data = new FormData();
 
     data.append("name", name);
     data.append("shopName", shopName);
-    data.append("shopLogo", shopLogo);
-    data.append("shopAddress", shopAddress);
     data.append("email", email);
-    data.append("phone", phone);
-    data.append("website", website);
+    data.append("number", number);
     data.append("password", password);
     data.append("confirmPassword", confirmPassword);
-    data.append("marchent", status);
+    data.append("link", "");
+    data.append("logo", logo);
 
-    console.log(data.get("shopLogo"));
-
-    fetch("http://127.0.0.1:8000/api/merchant", { method: "POST", body: data })
+    fetch(" http://localhost:5000/user/register", {
+      method: "POST",
+      body: data,
+    })
       .then((res) => res.json())
-      .then((json) => console.log(json.merchant));
+      .then((success) => {
+        console.log(success);
+      });
   };
 
   return (
@@ -85,7 +77,12 @@ const AddMerchants = (props) => {
             </button>
           </div>
           <div className="card-body border rounded">
-            <form ref={form} onSubmit={submit} className="add-merchant">
+            <form
+              ref={form}
+              onSubmit={submit}
+              className="add-merchant"
+              encType="multipart/form-data"
+            >
               <h4 className="text-success mt-2 mb-3">
                 Merchant <span style={{ color: "#640000" }}>Information</span>
               </h4>
@@ -94,11 +91,11 @@ const AddMerchants = (props) => {
                   <label htmlFor="mName">Merchant Name</label>
                   <input
                     onChange={handleChange}
+                    value={name}
                     className="form-control"
                     type="text"
                     name="name"
                     id="mName"
-                    value={name}
                     placeholder="Merchant Name"
                   />
                 </div>
@@ -110,67 +107,32 @@ const AddMerchants = (props) => {
                     className="form-control"
                     type="text"
                     name="shopName"
-                    id="shopName"
-                    placeholder="shop Name"
+                    id="ahopName"
+                    placeholder="Shop Name"
                   />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
-                  <label htmlFor="shopLogo">Shop Logo</label>
-                  <input
-                    onChange={handleFileInput}
-                    className="form-control"
-                    type="file"
-                    name="shopLogo"
-                    id="shopLogo"
-                    placeholder="Shop logo"
-                  />
-                </div>
-                <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
-                  <label htmlFor="shopAddress">Shop Address</label>
-                  <input
-                    onChange={handleChange}
-                    value={shopAddress}
-                    className="form-control"
-                    type="text"
-                    name="shopAddress"
-                    id="shopAddress"
-                    placeholder="Shop address"
-                  />
-                </div>
-                <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
-                  <label htmlFor="m-email">Email</label>
+                  <label htmlFor="email">Email</label>
                   <input
                     onChange={handleChange}
                     value={email}
                     className="form-control"
                     type="email"
                     name="email"
-                    id="m-email"
+                    id="email"
                     placeholder="Email"
                   />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
-                  <label htmlFor="mobile">Mobile</label>
+                  <label htmlFor="number">Number</label>
                   <input
                     onChange={handleChange}
-                    value={phone}
+                    value={number}
                     className="form-control"
                     type="text"
-                    name="phone"
-                    id="mobile"
-                    placeholder="Mobile"
-                  />
-                </div>
-                <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
-                  <label htmlFor="website">Website</label>
-                  <input
-                    onChange={handleChange}
-                    value={website}
-                    className="form-control"
-                    type="text"
-                    name="website"
-                    id="website"
-                    placeholder="Website"
+                    name="number"
+                    id="number"
+                    placeholder="Number"
                   />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
@@ -198,15 +160,14 @@ const AddMerchants = (props) => {
                   />
                 </div>
                 <div className="col-lg-6 col-md-6 col-sm-6 mb-3">
-                  {/* <label htmlFor="status">Status</label> */}
+                  <label htmlFor="logo">Upload Logo</label>
                   <input
-                    hidden
-                    value={"true"}
+                    onChange={handleFileInput}
                     className="form-control"
-                    type="text"
-                    name="status"
-                    id="status"
-                    placeholder="Status"
+                    type="file"
+                    name="logo"
+                    id="logo"
+                    placeholder="Logo"
                   />
                 </div>
               </div>
